@@ -106,7 +106,7 @@ impl App {
                 })
                 .collect();
             // 稳定排序: 同分时保持时间倒序
-            scored.sort_by(|a, b| b.0.cmp(&a.0));
+            scored.sort_by_key(|s| std::cmp::Reverse(s.0));
             self.filtered = scored.into_iter().map(|(_, i)| i).collect();
         }
         // 自下而上: 最新/最匹配的在底部 (贴近搜索栏), 默认选中底部

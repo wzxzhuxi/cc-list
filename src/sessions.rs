@@ -67,7 +67,7 @@ pub fn scan() -> Result<Vec<Session>> {
         .par_iter()
         .filter_map(|f| parse_session(f, &home))
         .collect();
-    sessions.sort_by(|a, b| b.epoch.cmp(&a.epoch));
+    sessions.sort_by_key(|s| std::cmp::Reverse(s.epoch));
     Ok(sessions)
 }
 
