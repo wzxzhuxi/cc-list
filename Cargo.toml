@@ -1,0 +1,25 @@
+[package]
+name = "cc-list"
+version = "0.1.0"
+edition = "2021"
+description = "TUI to browse and resume Claude Code sessions across projects"
+license = "MIT"
+repository = "https://github.com/wzxzhuxi/cc-list"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+clap = { version = "4", features = ["derive"] }
+dirs = "5"
+fuzzy-matcher = "0.3"
+ratatui = "0.29"
+rayon = "1"
+serde_json = "1"
+
+[profile.release]
+lto = true
+strip = true
+
+# The profile that 'dist' will build with
+[profile.dist]
+inherits = "release"

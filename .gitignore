@@ -1,0 +1,13 @@
+# 白名单机制: 默认忽略根下一切, 显式放行需要跟踪的内容
+/*
+!/.gitignore
+!/.github
+!/.claude-plugin
+!/commands
+!/src
+!/Cargo.toml
+!/Cargo.lock
+!/dist-workspace.toml
+!/LICENSE
+!/README.md
+!/README.en.md
