@@ -3,7 +3,7 @@
 //! 探测优先级 (环境变量优先于命令存在性):
 //! tmux → zellij → kitty(远程控制) → wezterm → Windows Terminal → 通用 GUI 终端 → macOS Terminal.app
 
-use anyhow::{anyhow, bail, Result};
+use anyhow::{bail, Result};
 use clap::ValueEnum;
 use std::path::{Path, PathBuf};
 use std::process::{Command, Stdio};
@@ -54,7 +54,7 @@ fn here(dir: &Path, sid: &str) -> Result<String> {
     {
         use std::os::unix::process::CommandExt;
         // exec 成功则永不返回
-        Err(anyhow!(cmd.exec()).context("failed to launch claude (is it in PATH?)"))
+        Err(anyhow::anyhow!(cmd.exec()).context("failed to launch claude (is it in PATH?)"))
     }
     #[cfg(not(unix))]
     {
