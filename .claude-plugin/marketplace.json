@@ -1,0 +1,14 @@
+{
+  "name": "cc-list-marketplace",
+  "description": "cc-list 会话浏览/恢复工具插件",
+  "owner": {
+    "name": "wzxzhuxi"
+  },
+  "plugins": [
+    {
+      "name": "cc-list",
+      "source": "./",
+      "description": "跨项目浏览/恢复 Claude Code 历史会话,在新 tab/新窗口/overlay 中并行开启"
+    }
+  ]
+}

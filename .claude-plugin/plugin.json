@@ -1,0 +1,8 @@
+{
+  "name": "cc-list",
+  "description": "跨项目浏览所有 Claude Code 历史会话,选择后在新 tab/新窗口/overlay 中恢复 (自动适配 tmux/zellij/kitty/wezterm)",
+  "version": "0.1.0",
+  "author": {
+    "name": "wzxzhuxi"
+  }
+}
